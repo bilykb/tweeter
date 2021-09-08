@@ -1,0 +1,11 @@
+nav {
+  height: 120px;
+  display: flex;
+  background-color: #4056A1;
+}
+
+nav span {
+  font-family: 'Bungee Shade', cursive;
+  color: #FFFF;
+  margin: 1.5em;
+};
