@@ -1,11 +1,27 @@
 nav {
-  height: 120px;
   display: flex;
+  height: 3em;
   background-color: #4056A1;
+  font-family: 'Bungee Shade', cursive;
+  font-size: 2em;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5em;
+  color:white;
+  z-index: 9;
+  position: sticky;
+  top: 0.5em;
 }
 
-nav span {
-  font-family: 'Bungee Shade', cursive;
-  color: #FFFF;
-  margin: 1.5em;
-};
+.writeNew {
+  display: flex;
+  font-size: 0.6em;
+  font-family: 'Source Sans Pro', sans-serif;
+  flex-direction: column;
+}
+
+.writeNew i {
+  color: red;
+  align-self: center;
+}
+
