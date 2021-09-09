@@ -8,15 +8,23 @@ html {
 }
 *, *:before, *:after {
   box-sizing: inherit;
-};
+}
 
 /*
  * Global layout stuff
  */
 
 body {
-  color: #545149;
+  color: #FFFF;
   background-color: #f4f1ec;
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
+}
+
+.lightFont {
+  font-weight: 300;
+}
+
+.heavyFont {
+  font-weight: 600;
 }
