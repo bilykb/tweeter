@@ -11,3 +11,12 @@
   margin: 1em;
   resize: none;
 }
+.submitAndCounter {
+  display: flex;
+  font-family: 'Bungee Shade', cursive;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
