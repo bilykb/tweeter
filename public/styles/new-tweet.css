@@ -1,3 +1,13 @@
 
 
 
+
+#tweet-text {
+  display: flex;
+  width: 35em;
+  border-style: none;
+  border-bottom: 5px solid #545149;
+  background-color: rgb(244, 241, 236);
+  margin: 1em;
+  resize: none;
+}
