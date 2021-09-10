@@ -11,7 +11,7 @@ html {
 }
 
 /*
- * Global layout stuff
+ * Global layout CSS
  */
 
 body {
@@ -24,10 +24,11 @@ body {
   align-items: center;
 }
 
-.container {
+main {
   display:flex;
-  color: black;
+  color: #545149;
   width: 90%;
+  justify-content: center;
 }
 
 .lightFont {
