@@ -2,15 +2,15 @@
 * new-tweet css styles
 */
 
-
-
-#tweet-text {
+textarea {
+  margin: auto;
+}
+.tweet-text {
   display: flex;
   width: 35em;
   border-style: none;
   border-bottom: 5px solid #545149;
   background-color: rgb(244, 241, 236);
-  margin: 1em;
   resize: none;
 }
 .submitAndCounter {
@@ -18,8 +18,7 @@
   font-family: 'Bungee Shade', cursive;
   justify-content: space-between;
   align-items: baseline;
-  margin-left: 1em;
-  margin-right: 1em;
+  margin: 1em;
 }
 
 button {
@@ -28,5 +27,8 @@ button {
   border: none;
   font-size: 1em;
   padding: 0.3em;
-  box-shadow: 3px 3px rgb(44, 131, 223);
+}
+
+button:hover {
+  box-shadow: 3px 3px 3px rgb(44, 131, 223);
 }

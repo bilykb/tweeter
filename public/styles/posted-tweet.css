@@ -1,0 +1,65 @@
+/*
+* Style for existing tweets
+* Utilizes .tweet-text in new-tweet.css
+*/
+
+article.tweet {
+  display: flex;
+  margin: 1em;
+  height: 8em;
+  width: 36em;
+  border: 5px solid;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+article.tweet:hover {
+  box-shadow: 3px 3px 3px rgb(44, 131, 223);
+}
+
+article.tweet header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0.5em;
+}
+
+.tweetFeedPhotos {
+  height: 2em;
+  width: 2em;
+  margin-right: 1em;
+}
+
+.user-handle {
+  align-items: flex-end;
+  color: lightgray
+}
+
+article.tweet footer {
+  align-self: center;
+}
+
+span.tweet-text span {
+  margin: 0.5em;
+}
+
+.posted-text-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: medium;
+  margin: 0.5em
+}
+
+.fa-flag:hover {
+  color: orange
+}
+
+.fa-retweet:hover {
+  color: orange;
+}
+
+.fa-heart:hover {
+  color: orange
+}

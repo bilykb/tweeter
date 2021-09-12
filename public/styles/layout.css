@@ -31,10 +31,26 @@ main {
   justify-content: center;
 }
 
+section {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  padding: 1em;
+}
+
 .lightFont {
   font-weight: 300;
 }
 
 .heavyFont {
   font-weight: 600;
+}
+
+.apply-flex {
+  display: flex;
+}
+
+.align-items-center {
+  align-items: center;
 }
