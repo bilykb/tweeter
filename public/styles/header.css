@@ -2,7 +2,7 @@
 * Header css
 */
 
-header {
+header.websiteHeader {
   height: 400px;
   width: 100%;
   display: flex;
