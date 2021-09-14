@@ -53,6 +53,9 @@ fetchTweets();
     const serializedData = $(this).serialize();
 
     $.post("/tweets/", serializedData)
-
+      .then(() => {
+        $(".tweet-text").val("");
+        fetchTweets();
+      });
   });
 });
