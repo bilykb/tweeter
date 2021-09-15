@@ -5,6 +5,14 @@
  */
 
 
+$(document).ready(function() {
+
+  const escape = function(str) {
+    let span = document.createElement("span")
+    
+    span.appendChild(document.createTextNode(str));
+    return span.innerHTML
+  }
 
   const createTweetElement = function(tweetData) {
     // const $username = $("<span>")
@@ -30,7 +38,7 @@
       <span class="user-handle heavyFont">${tweetData.user.handle}</span>
     </header>
     <footer>
-      <span class="tweet-text"><span>${tweetData.content.text}</span></span>
+      <span class="tweet-text"><span>${escape(tweetData.content.text)}</span></span>
       <div class="posted-text-info">
         <span>${tweetData.created_at}</span>
         <div>
@@ -89,3 +97,4 @@
           });
       }
   });
+});
