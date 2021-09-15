@@ -4,6 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+
 $(document).ready(function() {
 
   const createTweetElement = function(tweetData) {
@@ -52,10 +53,21 @@ fetchTweets();
     event.preventDefault();
     const serializedData = $(this).serialize();
 
-    $.post("/tweets/", serializedData)
-      .then(() => {
-        $(".tweet-text").val("");
-        fetchTweets();
-      });
+    if($('.counter').val() < 0) {
+      alert("Tweets can only have a maximum of 140 characters! Please try again");
+    } else {
+      $.post("/tweets/", serializedData)
+        .then(() => {
+            $(".tweet-text").val("");
+            $(".counter").css("color", "#545149")
+            $(".counter").val("140");
+            fetchTweets();
+        })
+        .catch((error) => {
+          if(error.status === 400) {
+            alert("Text field is empty! Please try again!");
+          }
+        });
+    }
   });
 });
