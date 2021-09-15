@@ -46,7 +46,10 @@
     <main class="container">
       <section>
         <form class="new-tweet" method="POST" action="/tweets">
-          <textarea name="text" class="tweet-text" placeholder="What are you humming about?"></textarea>
+          <textarea name="text" class="tweet-text" placeholder="What are you humming about?" required oninvalid="this.setCustomValidity('Please enter text before submitting!')" oninput="this.setCustomValidity('')"></textarea>
+          <div class="error">
+            <!-- error message if text area has a length of 0 or length of < 140 characters -->
+          </div>
           <div class="submitAndCounter">
             <button type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
@@ -54,7 +57,7 @@
         </form>
       </section>
       <section id="tweet-container">
-          
+        <!-- tweets -->
       </section>
     </main>
     
