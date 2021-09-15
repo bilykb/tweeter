@@ -13,6 +13,14 @@ textarea {
   background-color: rgb(244, 241, 236);
   resize: none;
 }
+
+.error {
+  color:crimson;
+  font-size: medium;
+  margin-top: 1em;
+  display: none;
+}
+
 .submitAndCounter {
   display: flex;
   font-family: 'Bungee Shade', cursive;
