@@ -5,9 +5,22 @@
  */
 
 
-$(document).ready(function() {
 
   const createTweetElement = function(tweetData) {
+    // const $username = $("<span>")
+    //   .text(tweetData.user.name)
+    // const $avatar = $("<img>")
+    //   .addClass("tweetFeedPhotos")
+    //   .attr("src", tweetData.user.avatars)
+    //   .attr("alt", "Profile Picture")
+    // const $usernameAndAvatar = $('<div>')
+    //   .addClass("apply-flex align-items-center")
+
+    // $usernameAndAvatar
+    //   .append($avatar, $username)
+    
+    // console.log($usernameAndAvatar)
+
     return `<article class="tweet">
     <header>
       <div class="apply-flex align-items-center">
@@ -46,28 +59,33 @@ $(document).ready(function() {
       renderTweets(data);
     });
   }
-fetchTweets();
+  fetchTweets();
 
-    $('.new-tweet').submit(function(event) {
-    
-    event.preventDefault();
+  $('.new-tweet').submit(function(event) {
+      
+    event.preventDefault($(this));
     const serializedData = $(this).serialize();
+    const $error = $('.error');
+    const $counter = $('.counter');
+    const $tweetText = $('.tweet-text');
 
-    if($('.counter').val() < 0) {
-      alert("Tweets can only have a maximum of 140 characters! Please try again");
-    } else {
-      $.post("/tweets/", serializedData)
-        .then(() => {
-            $(".tweet-text").val("");
-            $(".counter").css("color", "#545149")
-            $(".counter").val("140");
+      if($tweetText.val().length > 140) {
+          $error.append("<span>Tweets are allowed a max of 140 characters before submitting!</span>");
+          $error.slideDown(1000);
+      
+      } else {
+        $.post("/tweets/", serializedData)
+          .then(() => {
+            $error.empty();
+            $tweetText.val("");
+            $counter.css("color", "#545149");
+            $counter.val("140");
             fetchTweets();
-        })
-        .catch((error) => {
-          if(error.status === 400) {
-            alert("Text field is empty! Please try again!");
-          }
-        });
-    }
+          })
+          .catch((error) => {
+            if(error.status === 400) {
+              $tweetText.css("background-color", "#E5CB20");
+            }
+          });
+      }
   });
-});
