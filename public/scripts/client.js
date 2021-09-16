@@ -15,20 +15,7 @@ $(document).ready(function() {
   }
 
   const createTweetElement = function(tweetData) {
-    // const $username = $("<span>")
-    //   .text(tweetData.user.name)
-    // const $avatar = $("<img>")
-    //   .addClass("tweetFeedPhotos")
-    //   .attr("src", tweetData.user.avatars)
-    //   .attr("alt", "Profile Picture")
-    // const $usernameAndAvatar = $('<div>')
-    //   .addClass("apply-flex align-items-center")
-
-    // $usernameAndAvatar
-    //   .append($avatar, $username)
     
-    // console.log($usernameAndAvatar)
-
     return `<article class="tweet">
     <header>
       <div class="apply-flex align-items-center">
@@ -38,7 +25,9 @@ $(document).ready(function() {
       <span class="user-handle heavyFont">${tweetData.user.handle}</span>
     </header>
     <footer>
-      <span class="tweet-text"><span>${escape(tweetData.content.text)}</span></span>
+      <span class="tweet-text">
+        <span>${escape(tweetData.content.text)}</span>
+      </span>
       <div class="posted-text-info">
         <span>${tweetData.created_at}</span>
         <div>
@@ -52,12 +41,14 @@ $(document).ready(function() {
   }
 
   const renderTweets = function(tweets) {
-    $("#tweet-container").empty();
+    const $tweetContainer = $('#tweet-container');
+
+    $tweetContainer.empty();
 
     for (let postedTweet in tweets) {
       let $tweet = createTweetElement(tweets[postedTweet])
 
-        $('#tweet-container').prepend($tweet);
+      $tweetContainer.prepend($tweet);
     }
   };
 
