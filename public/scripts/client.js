@@ -7,6 +7,7 @@
 
 $(document).ready(function() {
 
+
   const escape = function(str) {
     let span = document.createElement("span")
     
@@ -29,7 +30,7 @@ $(document).ready(function() {
         <span>${escape(tweetData.content.text)}</span>
       </span>
       <div class="posted-text-info">
-        <span>${tweetData.created_at}</span>
+        <span id="update-time">${timeago.format(tweetData.created_at)}</span>
         <div>
           <i class="fas fa-flag"></i>
           <i class="fas fa-retweet"></i>
