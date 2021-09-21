@@ -20,10 +20,10 @@ $(document).ready(function() {
     return `<article class="tweet">
     <header>
       <div class="apply-flex align-items-center">
-        <img class="tweetFeedPhotos" src="${tweetData.user.avatars}" alt="Profile Picture" >
+        <img class="tweet-feed-photos" src="${tweetData.user.avatars}" alt="Profile Picture" >
         <span>${tweetData.user.name}</span>
       </div>
-      <span class="user-handle heavyFont">${tweetData.user.handle}</span>
+      <span class="user-handle heavy-font">${tweetData.user.handle}</span>
     </header>
     <footer>
       <span class="tweet-text">
