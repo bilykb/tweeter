@@ -4,7 +4,7 @@
 
 header.website-header {
   height: 400px;
-  width: 100%;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;

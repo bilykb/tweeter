@@ -40,8 +40,18 @@ section {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 1em;
+  padding: 1vw;
   width: 90%
+}
+
+@media only screen and (max-width: 599px) {
+  body {
+    font-size: 2vh;
+  }
+  section {
+    width: 100%;
+    padding: 0.5vw;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
@@ -62,11 +72,11 @@ section {
   }
 }
 
-.lightFont {
+.light-font {
   font-weight: 300;
 }
 
-.heavyFont {
+.heavy-font {
   font-weight: 600;
 }
 

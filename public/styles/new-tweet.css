@@ -21,7 +21,7 @@
   display: none;
 }
 
-.submitAndCounter {
+.submit-and-counter {
   display: flex;
   font-family: 'Bungee Shade', cursive;
   justify-content: space-between;

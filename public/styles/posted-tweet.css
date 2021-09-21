@@ -33,7 +33,7 @@ article.tweet footer {
   width: inherit;
 }
 
-.tweetFeedPhotos {
+.tweet-feed-photos {
   height: 2em;
   width: 2em;
   margin-right: 1em;
@@ -52,7 +52,7 @@ span.tweet-text span {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: medium;
+  font-size: 1.5vw;
   margin: 0.5em
 }
 
@@ -68,10 +68,26 @@ span.tweet-text span {
   color: orange
 }
 
+@media only screen and (max-width: 599px) {
+  body {
+    font-size: 2vh;
+  }
+  section {
+    width: 100%;
+    padding: 0.5vw;
+  }
+  .posted-text-info {
+    font-size: 2vw;
+  }
+}
+
 @media only screen and (min-width: 1024px) {
-  .tweetFeedPhotos {
+  .tweet-feed-photos {
     height: 3em;
     width: 3em;
     margin-right: 1em;
+  }
+  .posted-text-info {
+    font-size: 1vw;
   }
 }

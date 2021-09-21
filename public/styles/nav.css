@@ -17,16 +17,24 @@ nav {
   top: 0em;
 }
 
-.writeNew {
+.write-new {
   display: flex;
   font-size: 0.5em;
   font-family: 'Source Sans Pro', sans-serif;
   flex-direction: column;
 }
 
-.writeNew i {
+.write-new i {
   color: red;
   align-self: center;
+}
+
+@media only screen and (max-width: 599px) {
+  nav {
+    flex-direction: column;
+    justify-content: center;
+    gap: 1vh;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
