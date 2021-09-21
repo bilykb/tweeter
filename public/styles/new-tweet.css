@@ -2,16 +2,16 @@
 * new-tweet css styles
 */
 
-textarea {
-  margin: auto;
+.new-tweet {
+  width: 90%;
 }
+
 .tweet-text {
   display: flex;
-  width: 35em;
+  width: 100%;
   border-style: none;
   border-bottom: 5px solid #545149;
   background-color: rgb(244, 241, 236);
-  resize: none;
 }
 
 .error {
