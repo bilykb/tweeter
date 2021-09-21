@@ -2,13 +2,37 @@
 * Header css
 */
 
-header.websiteHeader {
+header.website-header {
   height: 400px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
   background-color: #0091ff;
   background-image: url("https://www.transparenttextures.com/patterns/argyle.png");
+}
+
+.profile-pic {
+  width: 100%;
+  height: auto;
+}
+
+.name {
+  text-align: -webkit-center;
+}
+
+@media only screen and (min-width: 1024px) {
+  header.website-header {
+    height: 300vh;
+    justify-content: start;
+    max-width: 25vw;
+    flex-direction: column;
+  }
+
+  header.website-header div {
+    position: sticky;
+    z-index: 7;
+    top: 35vh;
+    text-align: center;
+  }
 }

@@ -12,6 +12,8 @@ article.tweet {
   flex-direction: column;
   align-items: center;
   overflow-wrap: anywhere;
+  padding-top: 2%;
+  padding-bottom: 2%;
 }
 
 article.tweet:hover {
@@ -64,4 +66,12 @@ span.tweet-text span {
 
 .fa-heart:hover {
   color: orange
+}
+
+@media only screen and (min-width: 1024px) {
+  .tweetFeedPhotos {
+    height: 3em;
+    width: 3em;
+    margin-right: 1em;
+  }
 }

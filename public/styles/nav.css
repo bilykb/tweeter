@@ -29,3 +29,8 @@ nav {
   align-self: center;
 }
 
+@media only screen and (min-width: 1024px) {
+  nav {
+    align-self: flex-start;
+  }
+}
