@@ -21,6 +21,7 @@ $(document).ready(function() {
     const $error = $('.error');
     const $counter = $('.counter');
     const $tweetText = $('.tweet-text');
+    const $hide = $('.hide');
 
       if($tweetText.val().length > 140) {
           $error.append("<span>Tweets are allowed a max of 140 characters before submitting!</span>");
@@ -33,7 +34,7 @@ $(document).ready(function() {
             $tweetText.val("");
             $counter.css("color", "rgb(244, 241, 236)");
             $counter.val("140");
-            $('.hide').toggle("5000");
+            $hide.toggle("5000");
             fetchTweets();
           })
           .catch((error) => {

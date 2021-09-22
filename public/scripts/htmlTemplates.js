@@ -1,4 +1,4 @@
-import { escape } from './helperFunctions.js';
+import { escape } from './escape.js';
 
 
 /**
