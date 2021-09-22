@@ -91,6 +91,9 @@ span.tweet-text span {
     font-size: 1vw;
   }
   .tweet-text {
-    font-size: 1.5vw;
+    font-size: 1.3vw;
+  }
+  article.tweet header {
+    font-size: 1.3vw;
   }
 }
