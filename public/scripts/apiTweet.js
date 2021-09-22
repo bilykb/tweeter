@@ -2,7 +2,7 @@ import { createTweetElement } from './htmlTemplates.js';
 
 /**
  * Function that prepends new tweets onto #tweet-container
- * @param {object} tweets 
+ * @param {object} tweets - an existing database of tweets found in server-side tweeter
  */
 
 const renderTweets = function(tweets) {
