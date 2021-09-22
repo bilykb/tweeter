@@ -41,4 +41,7 @@ nav {
   nav {
     align-self: flex-start;
   }
+  .write-new {
+    font-size: 1.2vw;
+  }
 }
