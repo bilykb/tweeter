@@ -1,4 +1,6 @@
-
+/**
+ * Function used with .scrollToTop button which allows user to scroll to top of page
+ */
 
 const scrollToTop = function() {
   window.scrollTo({

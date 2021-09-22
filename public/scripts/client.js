@@ -10,9 +10,17 @@ $(document).ready(function() {
 
   fetchTweets();
 
+  /**
+   * jQuery function which toggles .new-tweet when .write-new is clicked
+   */
+
   $('.write-new').on('click', function() {
     $('.hide').toggle("5000");
   })
+
+  /**
+   * jQuery function which facilitates an AJAX post request to /tweets
+   */
 
   $('.new-tweet').submit(function(event) {
       
