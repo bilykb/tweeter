@@ -11,6 +11,15 @@ $(document).ready(function client() {
     $(".hide").toggle("5000");
   });
 
+  $(window).scroll(() => {
+    const $absoluteContainer = $(".absolute-container");
+
+    $absoluteContainer.append(
+      '<button class="scroll-to-top" onclick="scrollToTop()"><i class="fas fa-angle-double-up"></i></button>'
+    )
+  });
+
+
   /**
    * jQuery function which facilitates an AJAX post request to /tweets
    */
