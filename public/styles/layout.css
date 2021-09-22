@@ -46,12 +46,26 @@ section {
   position: absolute;
   bottom: 0;
   right: 0;
-  height: 9vh;
-  width: 5vw;
+  height: 4em;
+  width: 4em;
 }
 
 .scroll-to-top {
   position: fixed;
+  display:flex;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: crimson;
+  border: 1px solid crimson;
+  color:rgb(244, 241, 236);
+  justify-content: center;
+  align-items: center;
+}
+
+.scroll-to-top:hover {
+  box-shadow: 2px 2px 2px #514D4D;
+  
 }
 
 @media only screen and (max-width: 599px) {

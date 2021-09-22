@@ -29,7 +29,7 @@ nav {
 
 
 .write-new i {
-  color: red;
+  color: crimson;
   align-self: center;
   animation: hithere 1s ease infinite;
   
@@ -58,6 +58,6 @@ nav {
     font-size: 1.2vw;
   }
   .write-new:hover {
-    color: red;
+    color: crimson;
   }
 }
