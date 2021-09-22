@@ -79,6 +79,9 @@ span.tweet-text span {
   .posted-text-info {
     font-size: 2vw;
   }
+  article.tweet {
+    border: 3px solid;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
