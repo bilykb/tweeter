@@ -3,7 +3,15 @@
 */
 
 .new-tweet {
-  width: 90%;
+  width: 50%;
+  position: fixed;
+  top: 50vh;
+  border: 5px solid #545149;
+  background: #4056A1;
+  z-index: 3;
+}
+.hide {
+  display: none;
 }
 
 .tweet-text {
@@ -29,19 +37,24 @@
   margin: 1em;
 }
 
-button {
-  color: #FFFF;
-  background-color: #4056A1;
+.submit-tweet {
+  color: #4056A1;
+  background-color: rgb(244, 241, 236);
   border: none;
   font-size: 1em;
   padding: 0.3em;
 }
 
-button:hover {
+output.counter {
+  color: rgb(244, 241, 236)
+}
+
+.submit-tweet:hover {
   box-shadow: 3px 3px 3px rgb(44, 131, 223);
 }
 
 @media only screen and (min-width: 1024px) {
+
   .submit-and-counter {
     font-size: 1.5vw;
   }

@@ -10,6 +10,10 @@ $(document).ready(function() {
 
   fetchTweets();
 
+  $('.toggle-new-tweet').on('click', function() {
+    $('.hide').toggle("5000");
+  })
+
   $('.new-tweet').submit(function(event) {
       
     event.preventDefault($(this));
@@ -27,8 +31,9 @@ $(document).ready(function() {
           .then(() => {
             $error.empty();
             $tweetText.val("");
-            $counter.css("color", "#545149");
+            $counter.css("color", "rgb(244, 241, 236)");
             $counter.val("140");
+            $('.hide').toggle("5000");
             fetchTweets();
           })
           .catch((error) => {

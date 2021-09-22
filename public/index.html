@@ -27,10 +27,12 @@
     <!-- Top nav bar (sticky) -->
     <nav>
       <span class="title">tweeter</span>
-      <div class="write-new">
-        <span><span class="heavy-font">Write</span> a new Tweet</span>
-        <i class="fas fa-angle-double-down"></i>
-      </div>
+      <button class="toggle-new-tweet" type="button">
+        <div class="write-new">
+          <i class="fas fa-angle-double-down"></i>
+          <span><span class="heavy-font">Write</span> a new Tweet</span>
+        </div>
+      </button>
     </nav>
     <div class="content">
     <!-- header including profile picture and name -->
@@ -49,13 +51,13 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section>
-        <form class="new-tweet" method="POST" action="/tweets">
+        <form class="new-tweet hide" id="new-tweet" method="POST" action="/tweets">
           <textarea name="text" class="tweet-text" placeholder="What are you humming about?" required oninvalid="this.setCustomValidity('Please enter text before submitting!')" oninput="this.setCustomValidity('')"></textarea>
           <div class="error">
             <!-- error message if text area has a length of 0 or length of < 140 characters -->
           </div>
           <div class="submit-and-counter">
-            <button type="submit">Tweet</button>
+            <button class="submit-tweet" type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>

@@ -13,7 +13,7 @@ $(document).ready(function() {
     } else if (remainingChars <= 0) {
       $(counterUI).css("color", "#C70000");
     } else {
-      $(counterUI).css("color", "#545149");
+      $(counterUI).css("color", "rgb(244, 241, 236)");
     }
   });
 });
