@@ -90,4 +90,7 @@ span.tweet-text span {
   .posted-text-info {
     font-size: 1vw;
   }
+  .tweet-text {
+    font-size: 1.5vw;
+  }
 }
