@@ -49,7 +49,7 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section>
-        <form class="new-tweet hide" id="new-tweet" method="POST" action="/tweets">
+        <form class="new-tweet hide" method="POST" action="/tweets">
           <textarea name="text" class="tweet-text" placeholder="What are you humming about?" required oninvalid="this.setCustomValidity('Please enter text before submitting!')" oninput="this.setCustomValidity('')"></textarea>
           <div class="error">
             <!-- error message if text area has a length of 0 or length of < 140 characters -->
@@ -63,7 +63,9 @@
       <section id="tweet-container">
         <!-- tweets -->
       </section>
-        <button class="scroll-to-top" onclick="scrollToTop()"><i class="fas fa-angle-double-up"></i></button>
+        <div class="absolute-container">
+          <button class="scroll-to-top" onclick="scrollToTop()"><i class="fas fa-angle-double-up"></i></button>
+        </div>
     </main>
     </div>
     <!-- App JS -->
