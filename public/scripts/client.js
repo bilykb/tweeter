@@ -10,7 +10,7 @@ $(document).ready(function() {
 
   fetchTweets();
 
-  $('.toggle-new-tweet').on('click', function() {
+  $('.write-new').on('click', function() {
     $('.hide').toggle("5000");
   })
 

@@ -22,11 +22,24 @@ nav {
   font-size: 0.5em;
   font-family: 'Source Sans Pro', sans-serif;
   flex-direction: column;
+  cursor: pointer;
+  flex-direction: column-reverse;
 }
+
+
 
 .write-new i {
   color: red;
   align-self: center;
+  animation: hithere 1s ease infinite;
+  
+}
+@keyframes hithere {
+  30% { transform: scale(1.2); }
+  40%, 60% { transform: rotate(-20deg) scale(1.2); }
+  50% { transform: rotate(20deg) scale(1.2); }
+  70% { transform: rotate(0deg) scale(1.2); }
+  100% { transform: scale(1); }
 }
 
 @media only screen and (max-width: 599px) {
@@ -43,5 +56,8 @@ nav {
   }
   .write-new {
     font-size: 1.2vw;
+  }
+  .write-new:hover {
+    color: red;
   }
 }

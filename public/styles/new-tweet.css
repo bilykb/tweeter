@@ -5,7 +5,7 @@
 .new-tweet {
   width: 50%;
   position: fixed;
-  top: 50vh;
+  top: 30vh;
   border: 5px solid #545149;
   background: #4056A1;
   z-index: 3;
@@ -51,6 +51,12 @@ output.counter {
 
 .submit-tweet:hover {
   box-shadow: 3px 3px 3px rgb(44, 131, 223);
+}
+
+@media only screen and (max-width: 599px) {
+  .new-tweet {
+    width: 90vw;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
