@@ -1,5 +1,5 @@
 /**
- * Function that prevents cross site scripting.  Used in htmlTemplates.js for createTweetElement() funciton
+ * Function that prevents cross site scripting.  Used in htmlTemplates.js for createTweetElement() function
  */
 
 export const escape = function(str) {
