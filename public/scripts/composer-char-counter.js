@@ -1,5 +1,5 @@
 /**
- * jQuery function that keeps track of the number of characters in .tweet-text, changes the color of counter text depending on num of remaining chars
+ * jQuery event method that keeps track of the number of characters in .tweet-text, changes the color of counter text depending on num of remaining chars
  */
 
 $(document).ready(function characterCounter() {

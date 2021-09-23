@@ -7,7 +7,7 @@ $(document).ready(function client() {
   fetchTweets();
 
   /**
-   * jQuery function which toggles .new-tweet when .write-new is clicked
+   * jQuery event method which toggles .new-tweet when .write-new is clicked
    */
 
   $(".write-new").on("click", function () {
@@ -15,7 +15,7 @@ $(document).ready(function client() {
   });
 
   /**
-   * jQuery function which watches for scroll events.  If .scrollTop() >= 100 .scrollToTop class is visible.  Else, hidden.
+   * jQuery event method which watches for scroll events.  If .scrollTop() >= 100 .scrollToTop class is visible.  Else, hidden.
    */
   $(window).scroll(() => {
     const $scrollToTop = $(".scroll-to-top");
@@ -28,7 +28,7 @@ $(document).ready(function client() {
   });
 
   /**
-   * jQuery function which watches for a click on .scroll-to-top button.  If clicked, scrollToTop() function fires.
+   * jQuery event method which watches for a click on .scroll-to-top button.  If clicked, scrollToTop() function fires.
    */
 
   $(".scroll-to-top").on("click", function() {
@@ -36,7 +36,7 @@ $(document).ready(function client() {
   });
 
   /**
-   * jQuery function which facilitates an AJAX post request to /tweets
+   * jQuery event method which facilitates an AJAX post request to /tweets
    */
 
   $(".new-tweet").submit(function (event) {

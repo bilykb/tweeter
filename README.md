@@ -47,23 +47,45 @@ This repository contains all the HTML, CSS, jQuery, AJAX and javascript code cre
 ---
 ## Table of Contents
 ---
-| Functions | CSS Styles | HTML |
-| --- | --- | --- |
-| [renderTweets()](#render) | [header.css](#header) | [index.html](#index) |
-| [fetchTweets()](#fetch) | [layout.css](#layout) | |
-| [$(".write-new").on("click")](#write-new) | [nav.css](#nav) | |
-| [$(window).scroll()](#scroll) | [new-tweet.css](#new-css) | |
-| [$(".scroll-to-top").on("click")](#scroll-top-click) | [posted-tweet.css](#posted-tweet) | |
-| [$(".new-tweet").submit()](#new-tweet) | |
-| [$(".tweet-text").on("input")](#input) | |
-| [escape()](#escape) | |
-| [createTweetElement()](#create) | |
-| [scrollToTop()](#scroll-top) | |
+| jQuery | CSS Styles | Functions | HTML |
+| --- | --- | --- | --- |
+| [$(".tweet-text").on("input")](#input) | [layout.css](#layout) | [renderTweets()](#render) | [index.html](#index)|
+| [$(".new-tweet").submit()](#new-tweet) | [header.css](#header) | [fetchTweets()](#fetch) |
+| [$(".write-new").on("click")](#write-new) | [nav.css](#nav) | [escape()](#escape) |
+| [$(window).scroll()](#scroll) | [new-tweet.css](#new-css) | [createTweetElement()](#create) |
+| [$(".scroll-to-top").on("click")](#scroll-top-click) | [posted-tweet.css](#posted-tweet) | [scrollToTop()](#scroll-top) |
 
 
 ---
 ## Contents
 ---
+
+### HTML
+
+#### <a name="index">[index.html](https://github.com/bilykb/tweeter/blob/master/public/index.html)</a>
+> index HTML file
+
+
+### jQuery
+
+#### <a name="scroll-top-click">[$(".scroll-to-top").on("click")](https://github.com/bilykb/tweeter/blob/master/public/scripts/client.js)</a>
+> jQuery event method which watches for a click on .scroll-to-top button.  If clicked, scrollToTop() function fires
+
+
+#### <a name="new-tweet">[$(".new-tweet").submit()](https://github.com/bilykb/tweeter/blob/master/public/scripts/client.js)</a>
+> jQuery event method which facilitates an AJAX post request to /tweets
+
+
+#### <a name="input">[$(".tweet-text").on("input")](https://github.com/bilykb/tweeter/blob/master/public/scripts/composer-char-counter.js)</a>
+> jQuery event method that keeps track of the number of characters in .tweet-text, changes the color of counter text depending on num of remaining chars
+
+
+#### <a name="write-new">[$(".write-new").on("click")](https://github.com/bilykb/tweeter/blob/master/public/scripts/client.js)</a>
+> jQuery event method which toggles .new-tweet when .write-new is clicked
+
+
+#### <a name="scroll">[$(window).scroll()](https://github.com/bilykb/tweeter/blob/master/public/scripts/client.js)</a>
+ > jQuery event method which watches for scroll events.  If .scrollTop() >= 100 .scrollToTop class is visible.  Else, hidden.
 
 ### Functions
 
@@ -72,29 +94,7 @@ This repository contains all the HTML, CSS, jQuery, AJAX and javascript code cre
 
  
 #### <a name="fetch">[fetchTweets()](https://github.com/bilykb/tweeter/blob/master/public/scripts/apiTweet.js)</a>
-> jQuery function which toggles .new-tweet when .write-new is clicked
-
-
-#### <a name="write-new">[$(".write-new").on("click")](https://github.com/bilykb/tweeter/blob/master/public/scripts/client.js)</a>
-> jQuery function which toggles .new-tweet when .write-new is clicked
-
-
-
-#### <a name="scroll">[$(window).scroll()](https://github.com/bilykb/tweeter/blob/master/public/scripts/client.js)</a>
- > jQuery function which watches for scroll events.  If .scrollTop() >= 100 .scrollToTop class is visible.  Else, hidden.
-
-
-#### <a name="scroll-top-click">[$(".scroll-to-top").on("click")](https://github.com/bilykb/tweeter/blob/master/public/scripts/client.js)</a>
-> jQuery function which watches for a click on .scroll-to-top button.  If clicked, scrollToTop() function fires
-
-
-#### <a name="new-tweet">[$(".new-tweet").submit()](https://github.com/bilykb/tweeter/blob/master/public/scripts/client.js)</a>
-> jQuery function which facilitates an AJAX post request to /tweets
-
-
-#### <a name="input">[$(".tweet-text").on("input")](https://github.com/bilykb/tweeter/blob/master/public/scripts/composer-char-counter.js)</a>
-> jQuery function that keeps track of the number of characters in .tweet-text, changes the color of counter text depending on num of remaining chars
-
+> jQuery event method which toggles .new-tweet when .write-new is clicked
 
 #### <a name="escape">[escape()](https://github.com/bilykb/tweeter/blob/master/public/scripts/escape.js)</a>
 > Function that prevents cross site scripting.  Used in htmlTemplates.js for createTweetElement() function
@@ -129,7 +129,3 @@ This repository contains all the HTML, CSS, jQuery, AJAX and javascript code cre
 #### <a name="posted-tweet">[posted-tweet.css](https://github.com/bilykb/tweeter/blob/master/public/styles/posted-tweet.css)</a>
 > posted-tweet CSS rules
 
-### HTML
-
-#### <a name="index">[index.html](https://github.com/bilykb/tweeter/blob/master/public/index.html)</a>
-> index HTML file
