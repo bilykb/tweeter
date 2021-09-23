@@ -53,7 +53,7 @@ This repository contains all the HTML, CSS, jQuery, AJAX and javascript code cre
 | [fetchTweets()](#fetch) | [layout.css](#layout) | |
 | [$(".write-new").on("click")](#write-new) | [nav.css](#nav) | |
 | [$(window).scroll()](#scroll) | [new-tweet.css](#new-css) | |
-| [$(".scroll-to-top").on("click")](#scroll-top) | [posted-tweet.css](#posted-tweet) | |
+| [$(".scroll-to-top").on("click")](#scroll-top-click) | [posted-tweet.css](#posted-tweet) | |
 | [$(".new-tweet").submit()](#new-tweet) | |
 | [$(".tweet-text").on("input")](#input) | |
 | [escape()](#escape) | |
@@ -84,7 +84,7 @@ This repository contains all the HTML, CSS, jQuery, AJAX and javascript code cre
  > jQuery function which watches for scroll events.  If .scrollTop() >= 100 .scrollToTop class is visible.  Else, hidden.
 
 
-#### <a name="scroll-top">[$(".scroll-to-top").on("click")](https://github.com/bilykb/tweeter/blob/master/public/scripts/client.js)</a>
+#### <a name="scroll-top-click">[$(".scroll-to-top").on("click")](https://github.com/bilykb/tweeter/blob/master/public/scripts/client.js)</a>
 > jQuery function which watches for a click on .scroll-to-top button.  If clicked, scrollToTop() function fires
 
 
