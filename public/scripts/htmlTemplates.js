@@ -3,7 +3,7 @@ import { escape } from './escape.js';
 
 /**
  * Function that contains the html template for new tweets
- * @param {object} tweetData 
+ * @param {object} tweetData - server-side object database
  * @returns html template
  */
 
