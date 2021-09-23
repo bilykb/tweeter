@@ -1,6 +1,9 @@
 import { fetchTweets } from "./apiTweet.js";
+import { scrollToTop } from "./scrollToTop.js"
 
 $(document).ready(function client() {
+
+  // included to load already existing tweets in database
   fetchTweets();
 
   /**
@@ -11,14 +14,26 @@ $(document).ready(function client() {
     $(".hide").toggle("5000");
   });
 
+  /**
+   * jQuery function which watches for scroll events.  If .scrollTop() >= 100 .scrollToTop class is visible.  Else, hidden.
+   */
   $(window).scroll(() => {
-    const $absoluteContainer = $(".absolute-container");
+    const $scrollToTop = $(".scroll-to-top");
 
-    $absoluteContainer.append(
-      '<button class="scroll-to-top" onclick="scrollToTop()"><i class="fas fa-angle-double-up"></i></button>'
-    )
+    if ($(window).scrollTop() >= 100) {
+      $scrollToTop.css({"visibility": "visible"});
+    } else {
+      $scrollToTop.css({"visibility": "hidden"});
+    }
   });
 
+  /**
+   * jQuery function which watches for a click on .scroll-to-top button.  If clicked, scrollToTop() function fires.
+   */
+
+  $(".scroll-to-top").on("click", function() {
+    scrollToTop();
+  });
 
   /**
    * jQuery function which facilitates an AJAX post request to /tweets
